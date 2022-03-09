@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 from django.contrib.messages import constants
+import django_on_heroku
+
+django_on_heroku.settings(locals())
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -80,12 +83,12 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'djangoblog',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        'USER': 'richardcss',
-        'PASSWORD': 'sexo',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd35l3js34f842j',
+        'HOST': 'ec2-3-212-45-192.compute-1.amazonaws.com',
+        'PORT': '5432',
+        'USER': 'kwyoralrreodzx',
+        'PASSWORD': '03d9a866c317a29b6a60bb13a63f78adab010613e25e1cf63c3edecefccf14f5',
     }
 }
 
