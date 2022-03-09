@@ -13,7 +13,6 @@ Beaker==1.10.0
 beautifulsoup4==4.9.3
 bitstring==3.1.7
 blivet==3.4.3
-Brlapi==0.8.2
 Brotli==1.0.9
 certifi==2020.12.5
 cffi==1.15.0
