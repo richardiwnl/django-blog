@@ -136,6 +136,10 @@ STATICFILES_DIRS = [
     BASE_DIR / 'templates/static'
 ]
 
+CLOUDINARY_STORAGE = { 'CLOUD_NAME': 'djo7antwq', 'API_KEY': '648439256564174', 'API_SECRET': 'PUDaCUiCoDXkqsTnYlyJGxzdFeY', }
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
 
