@@ -17,7 +17,7 @@ Início
                 <a href="{% url 'post_detalhes' post.id %}">
                     <img class="card-img-top"
                         src="{{ post.imagem_post.url }}"
-                        alt="{{ post.titulo_post }}">
+                        alt="{{ post.titulo_post }}" style="min-height: 200px;">
                 </a>
 
                 {% endif %}
@@ -29,7 +29,7 @@ Início
                         </a>
                     </h5>
                     <p class="card-text">
-                        {{ post.excerto_post|truncatechars:300 }}
+                        {{ post.excerto_post|truncatechars:320 }}
                     </p>
                     <p class="card-text">
                         <small class="text-muted">
