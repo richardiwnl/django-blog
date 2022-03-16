@@ -12,6 +12,9 @@ class FormComentario(ModelForm):
 
         if len(comentario) < 10:
             self.add_error('comentario', 'Comentário deve ter mais que 10 caracteres')
+
+        if len(nome) < 3:
+            self.add_error('nome_comentario', 'Nome deve ter pelo menos 3 caracteres')
     
     class Meta:
         model = Comentario
@@ -19,6 +22,6 @@ class FormComentario(ModelForm):
     
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs) # Call to ModelForm constructor
-        self.fields['comentario'].widget.attrs['style'] = 'width:100%; height:200px; resize: none;'
+        self.fields['comentario'].widget.attrs['style'] = 'width: 90%; height:250px; resize: none;'
         self.fields['nome_comentario'].widget.attrs.update({'autocomplete': 'off'})
         self.fields['email_comentario'].widget.attrs.update({'autocomplete': 'off'})
