@@ -22,6 +22,6 @@ class FormComentario(ModelForm):
     
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs) # Call to ModelForm constructor
-        self.fields['comentario'].widget.attrs['style'] = 'width: 90%; height:250px; resize: none;'
+        self.fields['comentario'].widget.attrs['style'] = 'resize: none;'
         self.fields['nome_comentario'].widget.attrs.update({'autocomplete': 'off'})
         self.fields['email_comentario'].widget.attrs.update({'autocomplete': 'off'})

@@ -20,4 +20,16 @@ class Post(models.Model):
     
     def get_absolute_url(self):
         return reverse('post_detalhes', kwargs={'pk': self.pk})
-    
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+
+        # self.resize_image(self.imagem_post.name, 800)
+
+    # @staticmethod
+    # def resize_image(nome_imagem, nova_largura):
+    #     img_path = settings.BASE_DIR / nome_imagem
+    #     img = Image.open(img_path)
+    #     width, height = img.size()
+
+    #     print(width, height)
