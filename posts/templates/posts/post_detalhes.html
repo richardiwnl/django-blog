@@ -78,6 +78,10 @@
                 {% for visible_field in form.visible_fields %}
                     {{ visible_field|as_crispy_field }}
                 {% endfor %}
+                
+                <div class="g-recaptcha mb-3 mt-3" 
+                data-sitekey="6Lf9kvEeAAAAAAgPRO7tvW5TbUEwkRuc0eLIeFCu">
+                </div>
 
                 {% include 'parciais/_messages.html' %}
                     <input id="envia_comentario" type="submit" class="btn btn-dark"
